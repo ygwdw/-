@@ -1,0 +1,252 @@
+.find{
+			width: 100%;
+			height: 100%;
+		    border:1px solid #ccc;
+			border-left: 8px solid #0000b3;
+		   }
+	.tab-head{
+	height: 100%;
+	width: 30%;
+	}
+	.tab-head-div{
+	width: 100%;
+	height: 33.3%;
+	float: left;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	background: #eee;
+	line-height:8;
+	text-align: center;
+	cursor: pointer;
+		font-size: 15px;
+	}
+	.tab-head .current{
+		background: #FFF;
+		broder-bottom:1px solid #fff;
+		
+	}
+	.tab-body-ul{
+		display: none;
+		margin:20px 10px;
+		
+	}
+	.tab-body{
+		width: 70%;
+		height: 100%;
+	}
+	
+	
+	
+	
+	.tab-body-ul li{
+		margin:5px 5px 5px 10px;
+		text-align: center;
+	}
+	.tab-body .current{display: block;}
+	.tab-body,.tab-head{float:left;}
+	.head1{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-family: "微软雅黑";
+		font-size: 20px;
+		color:#323030;
+		
+		
+		
+	}
+	.head1 span{display: block;}
+
+.top11{
+	float:left;
+	margin-left:10px;
+	margin-top:0px;
+	width:70%;
+	height:100px;  
+
+	}
+	.top11 img{
+		position:absolute;
+		left:0px;
+		z-index:9;
+		}
+.top12{
+
+	padding-top:10px;
+	margin-bottom:0px;
+	width:12.7%;
+	height:30px;
+	position:absolute;
+	right:0px;
+	z-index:11;
+	background:rgba(0,0,0,0.5);
+	
+	}
+	.top12 lu{width:100%;
+		height: 50%;
+		
+		
+	}
+	.top12 li{float:left;
+	width:50%;
+	text-align: center;
+	font-size:13px;
+	}
+.top13{
+	float:left;
+	margin-left:150px;
+	margin-top:10px;
+	margin-bottom:0px;
+	width:1000px;
+	height:70px;
+	background-color:red;
+	}
+	.head-ul{width:100%;
+	height: 50%;
+		text-align: center;
+	}
+	.top13 li{float:left;
+	width:16.6%;
+	margin-top:20px;
+		font-size: 18px;
+		font-family: "微软雅黑";
+	}
+	
+.top2 {
+	width:100%;
+	height:700px; /* 定义div标签的高度为200px */
+	padding:0; /* 定义div标签内补丁为0 */
+	border:0 none; /* 定义div标签边框为0且无边框样式 */
+	margin:0; /* 定义div标签外补丁为0 */
+	color:#FFFFFF;
+	background-color:white; /* 定义div标签的背景色为黑色 */
+	margin-top:0px;
+}
+.k1{
+	width:45%;
+	height:420px;
+	margin-top:200px;
+	margin-left:4%;
+        background:#313131 url(../images/k1.jpg) no-repeat;
+        background-size:100% 100%;
+	float:left;
+        display:inline;
+}
+.k2{
+	width:45%;
+	height:420px;
+	margin-top:200px;
+        margin-right:4%;
+	background-color:red;
+        background:#313131 url(../images/k2.jpg) no-repeat;
+        background-size:100% 100%;
+	float:right;
+        display:inline;
+    }
+.k3{
+	width:29%;
+	height:390px;
+	margin-top:50px;
+	margin-left:4%;
+	margin-right:1.6%;
+    background:#313131 url(../images/k3.jpg) no-repeat;
+    background-size:100% 100%;
+	float:left;
+}
+
+.k5{
+	width:29%;
+	height:390px;
+	margin-top:50px;
+        background:#313131 url(../images/k5.jpg) no-repeat;
+        background-size:100% 100%;
+        margin-right:4%;
+	background-color:#F6F;
+	float:right;}
+.k4{
+	width:29%;
+	height:390px;
+	margin-top:50px;
+        background:#313131 url(../images/k4.jpg) no-repeat;
+        background-size:100% 100%;
+	float:right;
+        margin-right:1.6%;}
+.k6{
+	width:52%;
+	height:300px;
+	margin-top:50px;
+	margin-left:4%;
+   
+	float:left;
+     
+}
+.k7{
+	width:38%;
+	height:300px;
+	margin-top:50px;
+        margin-right:4%;
+        background:#313131 url(../images/K7.jpg) no-repeat;
+        background-size:100% 100%;
+	float:right;
+        display:inline;
+    }
+body,div,h2,ul,li{
+	margin:0;
+	padding:0;}
+ul{
+	list-style:none;}
+
+.bot{
+	margin-top:80px;
+	width:100%;
+	height:420px;
+	float:left;
+	background-color:#000;
+	font-family: "微软雅黑";
+	}
+.bot ul{
+	margin-left:10%;;
+	float:left;
+}
+.bot ul li{
+	margin:15px 0;}
+.bot ul a{
+	font-size:15px;
+	color:#FFF;
+	text-decoration:none;}
+.bot ul a:hover{
+	color:#FF8400;
+	text-decoration:underline;}
+
+.k1:hover{
+        background:#313131 url(../images/k1k.jpg) no-repeat;
+        background-size:100% 100%;}
+
+.k2:hover{
+	background:#313131 url(../images/k2k.jpg) no-repeat;
+        background-size:100% 100%;}
+
+.k3:hover{
+	background:#313131 url(../images/k3k.jpg) no-repeat;
+        background-size:100% 100%;}
+
+.k4:hover{
+	background:#313131 url(../images/k4k.jpg) no-repeat;
+        background-size:100% 100%;}
+
+.k5:hover{
+	background:#313131 url(../images/k5k.jpg) no-repeat;
+        background-size:100% 100%;}
+
+
+
+.k7:hover{
+	background:#313131 url(../images/k7.jpg) no-repeat;
+        background-size:100% 100%;}
+	a,a:link,a:visited{
+		color:black;
+		text-decoration:none;}
+	.nav{background:rgba(0,0,0,0.5);
+	margin-left: 90px;}
+	.top2{magin-top:0px;}
+	.bot ul{padding-top:50px;
+	padding-left:10px;}

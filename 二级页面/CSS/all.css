@@ -1,0 +1,109 @@
+	body{font-size: 14px;
+	font-family: "Î¢ÈíÑÅºÚ";}
+	ul,li{list-style: none;}
+	a:link,a:visited{
+	text-decoration: none;
+		
+	}
+
+.xinwen a{color:black;}
+.box1{
+	margin-top:80px;
+	width:90%;
+	margin-left:5%;
+	height:300px;
+	border:3px solid #99F;
+	border-top:3px solid #99F;
+	
+	}
+.box1 ul{
+	margin-left:20px;}
+.box1 ul li{
+	margin:15px 0;
+	text-align:center;}
+.box1 ul a{
+	font-size:30px;
+	color:#000;
+	text-decoration:none;}
+.box1 ul a:hover{
+	color:#FF8400;
+	text-decoration:underline;}
+		.all{margin-left: 10%;
+			margin-right: 10%;
+			height:1600px;
+			margin-top:20px;
+	}
+	
+		*{  
+			margin: 0;
+			padding: 0;
+			
+	}
+	.tiltle{
+			width:100%;
+			height: 40px;
+			background-color: #000000;
+			color: #FDF9F9;
+		    font-size: 17px;
+}
+.denglu{    padding-left:70%;
+	        margin-top: 1.0%;
+         	
+	
+	
+}
+.denglu,.shouji{float: left;}
+.shouji{width:10%;
+height: 10px;
+padding-top:10px;
+	padding-left: 40px;
+}	
+	
+	.left{
+			width:65%;
+			border-top:1px solid #000;
+			height:1000px;
+		
+		
+	}
+	.right{
+			width: 30%;
+		    height:1000px;
+			margin-left: 5%; 
+		
+	}
+	.right,.left{float:left;
+		          }
+.search{width:60%;
+height:60px;
+text-align:center;
+	margin-left:10%;
+	font-size:17px;
+	font-family: "Î¢ÈíÑÅºÚ";
+}
+.search ul{width:100%;
+height:100%;
+}
+.search li{width:20%;
+float:left;
+margin-top:15px;
+}
+.search a{color:black;}
+.search a:hover{background-color:black;
+	color:white;}
+.appdownload{width:100%;
+height:300px;
+margin-top:100px;
+font-weight:bold;
+}
+.appdownload ul{width:100%;
+padding-top:50px;
+	height:100px;	
+	font-size: 20px;font-weight: bold;
+}
+.appdownload li{width:100%;
+	height:50px;
+	margin:0px;
+	float:left;
+}
+.denglu a{color:white;}

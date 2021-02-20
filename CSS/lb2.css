@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+* { 
+ padding: 0px; 
+ margin: 0px; 
+ } 
+ a { 
+ text-decoration: none; 
+ } 
+ ul { 
+ list-style: outside none none; 
+ } 
+ .slider, .slider-panel img, .slider-extra {         /*修改轮播的大小在这里*/
+ width: 100%;
+ height:100%;
+ } 
+ .slider {                                          /*最大的盒子的class是这个，修改位置给它改属性*/
+ margin: 0px auto; 
+ position: relative; 
+ } 
+ .slider-panel, .slider-nav, .slider-pre, .slider-next { 
+ position: absolute; 
+ z-index: 8; 
+ } 
+ .slider-panel { 
+ position: absolute; 
+ } 
+ .slider-panel img {         /*注意图片的规格，与盒子大小不符会压缩*/
+ border: none; 
+ overflow:hidden;
+ } 
+ .slider-extra { 
+ position: relative; 
+ color:#FFF;
+ } 
+ .slider-nav { 
+ margin-left: -51px; 
+ position: absolute; 
+ left: 50%; 
+ bottom: 4px; 
+ } 
+ .slider-nav li { 
+ background:#3e3e3e;                          /*小圈的初始颜色*/
+ border-radius: 50%;                            /*这个设置使标签为小圈圈，如果要小正方形，删去该行*/
+ cursor: pointer; 
+ margin: 0 2px; 
+ overflow: hidden; 
+ text-indent:-9999px; 
+ display: inline-block; 
+ height: 12px; 
+ width: 12px;
+ line-height: 18px; 
+
+ } 
+ .slider-nav .slider-item-selected { 
+ background:red;                             /*小圈选中时的颜色*/
+ } 
+ .slider-page a{                                /*左右箭头的设置在这里*/
+ background: rgba(0, 0, 0, 0.2); 
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000); 
+ color: #fff; 
+ text-align: center; 
+ display: block; 
+ font-family: "simsun"; 
+ font-size: 22px; 
+ width: 33px;                                    
+ height: 80px; 
+ line-height: 62px; 
+ margin-top: -31px; 
+ position: absolute; 
+ top: 50%; 
+ } 
+ .slider-page a:HOVER { 
+ background: rgba(0, 0, 0, 0.4); 
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000); 
+ } 
+ .slider-next { 
+ left: 100%; 
+ margin-left: -28px; 
+ } 
+.slider-next,.slider-pre{ color:#FFF;}

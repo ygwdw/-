@@ -1,0 +1,41 @@
+/* CSS Document */
+.huoyuebiaoti{border-bottom: 1px solid #000;}
+.every strong{font-size: 20px;}
+
+.user1{
+    display:inline;
+	margin-right:10px;}
+.user2{
+	
+	display:inline;
+	margin-right:10px;
+	}
+.user3{
+	
+	display:inline;
+}
+.user4{
+	background-color:#C00;
+	display:inline;}
+.every{
+	float:left;
+margin-top:100px;
+width:100%;
+margin-bottom:80px;
+border:1px solid #ccc;}
+	.one1,.two1,.three,.four,.five {
+		
+		width:100%;
+		margin-top:30px;
+		font-size:16px;
+		}
+	
+	
+	
+	.tit{ background-color:#69F; margin-bottom:15px;}
+   .user3:hover{
+	background-color:#FF8400;
+	text-decoration:underline;}
+	.user2:hover{
+	background-color:#FF8400;
+	text-decoration:underline;}

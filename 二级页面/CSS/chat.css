@@ -1,0 +1,38 @@
+/* CSS Document */
+
+.chat{width:100%;
+height:280px;
+
+border-bottom:2px  solid #ccc;
+margin-bottom:30px;}
+
+.chat-head{font-size:25px;
+font-family: "微软雅黑";
+	font-weight: bold;
+	margin-bottom:18px;
+	color: blue;
+}
+
+.chat-zuozhe{margin-bottom:10px;
+font-size: 16px;
+color:#575757;}
+
+
+
+.chat-body1{
+	
+height:115px;
+font-size:17px;
+font-family: "微软雅黑";
+}
+
+.chat-body2{color:#7A7575;}
+ .chat span{margin-right:35px;
+font-size:14px;}
+.chat-left{width:40%;
+hetght:100%;}
+.chat-right{width:60%;
+height:100%;}
+.chat-left,.chat-right{float:left;}
+
+

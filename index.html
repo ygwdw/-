@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页盒子</title>
+<script type="text/javascript" src="JS/jquery-3.2.1.js"></script> 
+<link type="text/css" rel="stylesheet" href="CSS/title.css"/>
+<link type="text/css" rel="stylesheet" href="CSS/lb2.css"/>
+	<script type="text/javascript" src="JS/example27.js"></script> 
+<link type="text/css" rel="stylesheet" href="CSS/base.css"/>
+<script type="text/javascript"> 
+ $(document).ready(function() { 
+ var length, 
+  currentIndex = 0, 
+  interval, 
+  hasStarted = false, //是否已经开始轮播 
+  t = 3000; //轮播时间间隔 
+ length = $('.slider-panel').length; 
+ //将除了第一张图片隐藏 
+ $('.slider-panel:not(:first)').hide(); 
+ //将第一个slider-item设为激活状态 
+ $('.slider-item:first').addClass('slider-item-selected'); 
+ //隐藏向前、向后翻按钮 
+ $('.slider-page').hide(); 
+ //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动 
+ $('.slider-panel, .slider-pre, .slider-next').hover(function() { 
+  stop(); 
+  $('.slider-page').show(); 
+ }, function() { 
+  $('.slider-page').hide(); 
+  start(); 
+ }); 
+ $('.slider-item').hover(function(e) { 
+  stop(); 
+  var preIndex = $(".slider-item").filter(".slider-item-selected").index(); 
+  currentIndex = $(this).index(); 
+  play(preIndex, currentIndex); 
+ }, function() { 
+  start(); 
+ }); 
+ $('.slider-pre').unbind('click'); 
+ $('.slider-pre').bind('click', function() { 
+  pre(); 
+ }); 
+ $('.slider-next').unbind('click'); 
+ $('.slider-next').bind('click', function() { 
+  next(); 
+ }); 
+ /** 
+  * 向前翻页 
+  */
+ function pre() { 
+  var preIndex = currentIndex; 
+  currentIndex = (--currentIndex + length) % length; 
+  play(preIndex, currentIndex); 
+ } 
+ /** 
+  * 向后翻页 
+  */
+ function next() { 
+  var preIndex = currentIndex; 
+  currentIndex = ++currentIndex % length; 
+  play(preIndex, currentIndex); 
+ } 
+ /** 
+  * 从preIndex页翻到currentIndex页 
+  * preIndex 整数，翻页的起始页 
+  * currentIndex 整数，翻到的那页 
+  */
+ function play(preIndex, currentIndex) { 
+  $('.slider-panel').eq(preIndex).fadeOut(500) 
+  .parent().children().eq(currentIndex).fadeIn(1000); 
+  $('.slider-item').removeClass('slider-item-selected'); 
+  $('.slider-item').eq(currentIndex).addClass('slider-item-selected'); 
+ } 
+ /** 
+  * 开始轮播 
+  */
+ function start() { 
+  if(!hasStarted) { 
+  hasStarted = true; 
+  interval = setInterval(next, t); 
+  } 
+ } 
+ /** 
+  * 停止轮播 
+  */
+ function stop() { 
+  clearInterval(interval); 
+  hasStarted = false; 
+ } 
+ //开始轮播 
+ start(); 
+ }); 
+</script> 
+	
+</head>
+
+
+
+<body>
+
+   <div class="top11">
+    <img src="images/1.png"/>
+<div class="navbox">
+  <div class="nav">
+    <ul>
+      <li class="drop-menu-effect"><a href="#"><span>网站首页</span></a></li>
+    </ul>
+    <!-- first-->
+      
+      <li class="drop-menu-effect"><a href="MID商城页面/index.html"> <span>MID商城</span></a>                <!-- second-->
+        <div class="submenu">
+          <div class="mj_menu_pro_bg">
+            <div class="mj_menu_pro_main">
+              <div class="mj_menu_pro_li">
+                <div class="mj_menu_li_txt">
+                  <a href="#"><font>手机</font></a><br />              <!-- 小标题-->
+                  <a href="#">X系列</a><br />                       <!-- 文字内容-->
+                  <a href="#">L系列</a><br />
+                  <a href="#">旗舰机</a>
+                  <p><font>平板电脑</font><br />             <!-- 小标题-->
+                  <a href="#">K系列</a><br />
+                  <a href="#">Cr像机系列</a><br />
+                  <a href="#">键盘系列</a></p>
+                </div>
+              </div>
+              <div class="mj_menu_pro_li" style="padding-left:48px;">
+                <div class="mj_menu_li_txt">
+                  <a href="#"><font>摄像机</font></a><br />              
+                  <a href="#">摄像机系列</a><br />
+                  <a href="#">智能分析系列</a><br />
+                  <a href="#">夜视监控系列</a><br />
+                  <a href="#">云台摄像机系列</a><br />
+                  <a href="#">高速球型摄像机系列</a>
+                  <p><a href="#"><font>存储产品</font></a></p>
+                </div>
+              </div>
+              <div class="mj_menu_pro_li" style="padding-left:48px;">
+                <div class="mj_menu_li_txt">
+                <a href="#"><font>配件系列</font></a><br />
+                  <a href="#">耳机</a><br />
+                  <a href="#">电容笔</a><br />
+                  <a href="#">手机壳定制</a><br />
+                  <a href="#">支架系列</a>
+                  <p style="padding-top:24px;"><a href="#"><font>编解码产品</font></a></p>
+                </div>
+              </div>
+              <div class="mj_menu_pro_li" style="padding-left:48px;">
+                <div class="mj_menu_li_txt">
+                  <a href="#"><font>防爆产品</font></a><br />
+                    <a href="#">防爆产品（高清）</a><br />
+                  <a href="#">防爆产品（模拟）</a>
+                  <p style="padding-top:66px;"><a href="#"><font>智能交通产品</font></a></p>
+                </div>
+              </div>
+              <div class="mj_menu_pro_li" style="padding-left:48px;">
+                <div class="mj_menu_li_txt">
+                  <a href="#"><font>行业解决方案</font></a><br />
+                
+                  <p style="padding-top:66px;"><a href="#"><font>平台软件</font></a></p>
+                </div>
+              </div>
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="drop-menu-effect"><a href="#"><span>资讯中心</span></a>                    <!-- third-->
+        <div class="submenu">
+          <div class="mj_menu_news_bg">
+            <div class="mj_menu_news_main">
+              <div class="mj_menu_news_li">
+                <div class="mj_menu_li_txt">
+                  <a href="#">公司新闻</a><br />
+                  <a href="#">行业新闻</a><br />
+                  <a href="#">展会信息</a></div>
+              </div>
+              <div class="mj_menu_news_img">
+                <font>资讯中心</font></div>                                                    
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="drop-menu-effect"> <a href="#"><span>下载中心</span></a>
+        <div class="submenu">
+          <div class="mj_menu_news_bg">
+            <div class="mj_menu_news_main">
+              <div class="mj_menu_news_li">
+                <div class="mj_menu_li_txt">
+                  <a href="#">总览</a><br />
+                  <a href="#">认证证书下载</a><br />
+                  <a href="#">说明书下载</a><br />
+                  <a href="#">协议下载</a><br />
+                  <a href="#">样本目录下载</a><br />
+                  <a href="#">其它</a></div>
+              </div>
+              <div class="mj_menu_news_img">
+                <font>下载中心</font></div>                                  <!-- 图片-->
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="drop-menu-effect"> <a href="#"><span>企业概况</span></a>
+        <div class="submenu">
+          <div class="mj_menu_news_bg">
+            <div class="mj_menu_news_main">
+              <div class="mj_menu_news_li">
+                <div class="mj_menu_li_txt"><a href="#">公司简介</a><br />
+                  <a href="#">质量方针</a><br />
+                  <a href="#">企业理念</a><br />
+                  <a href="#">发展历程</a><br />
+                  <a href="#">公司荣誉</a><br />
+                  <a href="#">企业风采</a></div>
+              </div>
+              <div class="mj_menu_news_img">
+                <font>公司概况</font></div>                                                   
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="drop-menu-effect"> <a href="#"><span>联系我们</span></a>
+        <div class="submenu" style="left:-347px;">
+          <div class="mj_menu_news_bg">
+            <div class="mj_menu_news_main">
+              <div class="mj_menu_news_li2">
+                <div class="mj_menu_li_txt"><a href="#">联系方式</a><br />
+                  <a href="#">智能地图</a><br />
+                  <a href="#">人才招聘</a><br />
+                  <a href="#">在线留言</a></div>
+              </div>
+              <div class="mj_menu_news_img2">
+                <font>联系我们</font></div>
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+      <li class="drop-menu-effect"> <a href="二级页面/index.html"><span>MID社区</span></a>
+    <!--   <div class="submenu" style="left:-347px;">
+          <div class="mj_menu_news_bg">
+            <div class="mj_menu_news_main">
+              <div class="mj_menu_news_li3">
+                <div class="mj_menu_li_txt"><a href="#">工程实例名录</a><br />
+                  <a href="#">部分案例图片</a></div>
+              </div>
+              <div class="mj_menu_news_img3"><img src="http://demo.lanrenzhijia.com/2014/menu1217/images/case_menu_pic.jpg" /><br />                                                                                                   
+                <font>工程科技研究中心</font></div>
+              <div style="clear:both; height:0px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </div>       -->
+      </li>
+      
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+$(function(){
+	lanrenzhijia(".drop-menu-effect");
+});
+function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);
+		var theMenu = $this.find(".submenu");
+		var tarHeight = theMenu.height();
+		theMenu.css({height:0});
+		$this.hover(
+			function(){
+				$(this).addClass("mj_hover_menu");
+				theMenu.stop().show().animate({height:tarHeight},400);
+			},
+			function(){
+				$(this).removeClass("mj_hover_menu");
+				theMenu.stop().animate({height:0},400,function(){
+					$(this).css({display:"none"});
+				});
+			}
+		);
+	});
+}
+</script>
+</div>
+
+
+
+<!--<div class="top13">
+  <ul class="head-ul">
+	<li class="head-li">MID商城</li>
+		<li class="head-li">MID手机</li>
+		<li class="head-li">MID耳机</li>
+		<li class="head-li">MID配件</li>
+		<li class="head-li">服务</li>
+		<li class="head-li">社区</li>
+	
+	</ul>
+</div>--->
+<div class="top12"> 
+				<ul class="denglu">
+				<li class="denglu-li"><a href="登录界面/denglu.html"><font color="#FFFFFF" ><strong>登录</strong></font></a></li>
+				<li class="denglu-li"><a href="登录界面/register.html"><font color="#FFFFFF"><strong>注册</strong></font></a></li>
+
+	</ul>
+</div>
+<div class="top2">
+<div class="slider"> 
+ <ul class="slider-main"> 
+  <li class="slider-panel"> 
+  <a href="#" target="_blank"><img src="images/1n.jpg"></a> 
+  </li> 
+
+  <li class="slider-panel"> 
+  <a href="#" target="_blank"><img src="images/2.jpg"></a> 
+  </li> 
+  <li class="slider-panel"> 
+  <a href="#" target="_blank"><img src="images/3.jpg"></a> 
+  </li> 
+  <li class="slider-panel"> 
+  <a href="#" target="_blank"><img src="images/4.jpg"></a> 
+  </li> 
+ </ul> 
+ <div class="slider-extra"> 
+  <ul class="slider-nav"> 
+  <li class="slider-item">1</li> 
+  <li class="slider-item">2</li> 
+  <li class="slider-item">3</li> 
+  <li class="slider-item">4</li> 
+  </ul> 
+  <div class="slider-page"> 
+  <a class="slider-pre" href="javascript:;;"><</a> 
+  <a class="slider-next" href="javascript:;;">></a> 
+  </div> 
+ </div> 
+ </div> 
+</div>
+<div>
+   <div class="k1">
+   </div>
+   <div class="k2">
+   </div>
+</div>
+<div>
+   <div class="k3">
+   </div>
+   <div class="k5">
+   </div>
+   <div class="k4">
+   </div>
+</div>
+
+<div>
+   <div class="k6"> <div class="find">
+					<div class="tab-head" id="tab-head">
+									<div class="tab-head-div current">智能芯片</div>
+					  <div class="tab-head-div">科技前沿</div>
+					  <div class="tab-head-div">技术大战</div>
+        </div>
+		  <div class="tab-body" id="tab-body">
+			<ul class="tab-body-ul current">
+						
+						<li><img src="images/芯片.jpg" height="243" width="228" align="left">
+							麒麟970芯片是华为海思推出的一款采用了台积电10nm工艺的新一代芯片，是全球首款内置独立NPU（神经网络单元）的智能手机AI计算平台。</li>
+						
+						
+						
+			</ul>
+							<ul class="tab-body-ul">
+						
+						<li><img src="images/5G.jpg" height="243" width="228" align="left">第五代移动通信会满足高移动性、无缝漫游和无缝覆盖(实现系统间如HAPS、HDR与ITS间的切换, 可以达到真正的无缝覆盖)。从原理上讲, 实现宽带高速数据率和高移动性是比较困难的。 </li>
+						
+						
+						
+			</ul>
+			  <ul class="tab-body-ul">
+						
+						<li>　<img src="images/didi.png" height="243" width="228" align="left">网约车起家，厮杀并购壮大，然后融资、布局、再融资、再布局，直至估值达到560亿美元，现金储备接近120亿美元。但是，滴滴距离高枕无忧还很远。
+						
+						
+						
+			</ul>
+		</div>
+			
+	  </div>
+   </div>
+   <div class="k7">
+</div>
+
+
+<div class="bot">
+  <ul>
+   <h3><font color="#ccc">按访问者</font></h3>
+   <li><a href="#">个人用户</a></li>
+   <li><a href="#">企业用户</a></li>
+   <li><a href="#">运营商用户</a></li>
+   <li><a href="#">新闻媒体</a></li>
+   <li><a href="#">合作伙伴</a></li>
+   <li><a href="#">开发者</a></li>
+   <li><a href="#">供应商</a></li>
+   <li><a href="#">求职者</a></li>
+  </ul>
+  
+  <ul>
+   <h3><font color="#ccc">关于午夜</font></h3>
+   <li><a href="#">公司简介</a></li>
+   <li><a href="#">公司治理</a></li>
+   <li><a href="#">高管信息</a></li>
+   <li><a href="#">可持续发展</a></li>
+   <li><a href="#">网络安全</a></li>
+   <li><a href="#">出版物</a></li>
+   <li><a href="#">公司年报</a></li>
+   <li><a href="#">期刊杂志</a></li>
+  </ul>
+  
+  <ul>
+  <h3><font color="#CCCCCC">新闻展会</font></h3>
+   <li><a href="#">新闻</a></li>
+   <li><a href="#">安全通告</a></li>
+   <li><a href="#">展会活动</a></li>
+   <p>&nbsp; </p>
+  <h3><font color="#CCCCCC">行业洞察</font></h3>
+   <li><a href="#">全球联接指数</a></li>
+   <li><a href="#">MBB 2020</a></li>
+   <li><a href="#">iLab</a></li>
+   
+  </ul>
+  
+   <ul>
+   <h3><font color="#CCCCCC">快速链接</font></h3>
+   <li><a href="#">午夜商城</a></li>
+   <li><a href="#">MID官网</a></li>
+   <li><a href="#">产品定义社区</a></li>
+   <li><a href="#">夜夜夜夜</a></li>
+   <li><a href="#">除名查询</a></li>
+   <li><a href="#">在线反馈</a></li>
+   <li><a href="#">联系客服</a></li>
+   <li><a href="#">更多>></a></li>
+  </ul>
+  <ul>
+  
+  <li><font color="#FFFFFF" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关注我们</font></li>
+  <li>&nbsp;<img src="images/pic222.jpg" height="150px"/></li>
+  </ul>
+ 
+</div>
+
+
+</body>
+</html>
